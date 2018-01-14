@@ -1,0 +1,29 @@
+{
+  "name": "proxy-mock-middleware",
+  "version": "0.0.4",
+  "description": "Express middleware to proxy request to another host and mock data",
+  "main": "index.js",
+  "bin": {
+    
+  },
+  "scripts": {
+    "pmmtest": "cd test && node ./bin/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Magicwager/nodejs-demo/tree/master/npm-packages/express-proxy-mock"
+  },
+  "keywords": [
+    "express",
+    "proxy",
+    "mock",
+    "node"
+  ],
+  "author": "magicwager",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.17.4"
+  }
+}
