@@ -1,0 +1,33 @@
+{
+    "state":1,
+    "data":[
+        {
+        "title": "百度首页",
+        "key": "https://www.baidu.com/",
+        "children": [
+            {
+                "title": "百度新闻",
+                "key": "http://news.baidu.com/",
+                "children": [{ "title": "百家号", "key": "https://baijia.baidu.com/" }]
+            },
+            {
+                "title": "百度贴吧",
+                "key": "https://tieba.baidu.com/index.html"
+             }, 
+            {
+                "title": "百度知道",
+                "key": "https://zhidao.baidu.com/"
+             }
+    ]
+        }, {
+        "title": "阿里云首页",
+        "key": "https://www.aliyun.com/",
+        "children": [
+            { "title": "阿里云大数据", "key": "https://data.aliyun.com/" },
+            { "title": "阿里云人工智能", "key": "https://et.aliyun.com" },
+            { "title": "阿里云开发者中心", "key": "https://developer.aliyun.com" }
+        ]
+        }
+    ],
+    "message":"success"
+  }

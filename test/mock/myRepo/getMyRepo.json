@@ -1,0 +1,31 @@
+{
+    "state":1,
+    "data":[
+        {
+            "title":"react-demos",
+            "href":"https://github.com/Magicwager/react-demos.git",
+            "content":"从最基础的react示例到结合gulp搭建react项目再到gulp+react+es6，步步为营"
+        },
+        {
+            "title":"react-gulp-es6",
+            "href":"https://github.com/Magicwager/react-gulp-es6.git",
+            "content":"最简易利用gulp搭建react项目，并且是最新的es6写法"
+        },
+        {
+            "title":"webpack-example",
+            "href":"https://github.com/Magicwager/webpack-example.git",
+            "content":"这是一个关于webpack的简单示例工程，对于没接触过webpack的同学可以拿来练手，对有一定基础的同学可以选择性看看，希望有所帮助"
+        },
+        {
+            "title":"ncbuild",
+            "href":"https://github.com/Magicwager/ncbuild.git",
+            "content":"本项目为内部使用，实现快速创建模板，列表按钮，卡片按钮。"
+        },
+        {
+            "title":"react-gulp-es6",
+            "href":"https://github.com/Magicwager/react-gulp-es6.git",
+            "content":"最简易利用gulp搭建react项目，并且是最新的es6写法"
+        }
+    ],
+    "message":"success"
+}

@@ -84,6 +84,26 @@ module.exports = {
     	pmm.start()
 	});
 ```
+### 测试
+
+* 下载源码：
+
+
+ `git clone https://github.com/Magicwager/proxy-mock-middleware.git`
+
+* 进入测试目录：
+
+	`cd proxy-mock-middleware/test`
+
+* 安装依赖包：
+
+	`npm install`
+
+* 启动测试工程：
+
+	`npm run pmmtest`
+
+
 
 
 

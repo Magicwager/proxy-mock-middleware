@@ -7,7 +7,7 @@
     
   },
   "scripts": {
-    "pmmtest": "cd test && node ./bin/test.js"
+    "pmmtest": "cd test && gulp"
   },
   "repository": {
     "type": "git",
