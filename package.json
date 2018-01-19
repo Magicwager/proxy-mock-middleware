@@ -1,7 +1,7 @@
 {
   "name": "proxy-mock-middleware",
-  "version": "0.0.6",
-  "description": "Express middleware to proxy request to another host and mock data",
+  "version": "0.0.7",
+  "description": "基于express 搭建前端代理以及本地模拟服务，方便前端开发",
   "main": "index.js",
   "bin": {
     
