@@ -8,6 +8,7 @@
 
 ```
 npm install proxy-mock-middleware
+
 ```
 * 使用
 
@@ -73,7 +74,7 @@ module.exports = {
 2.在`gulpfile.js`中引用该插件，如下所示：
 
 ```
-	**var pmm = require('proxy-mock-middleware');**
+var pmm = require('proxy-mock-middleware');
 
 ```
 
