@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pmmtest": "gulp"
+    "pmmtest": "node ./bin/test"
   },
   "repository": {
     "type": "git",

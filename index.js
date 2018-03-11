@@ -3,28 +3,19 @@ var path = require("path");
 var express = require("express");
 var proxy = require('http-proxy-middleware');
 var app = express();
-var router = express.Router();
-var mockConfig, svrConfig, proxyConfig, staticConfig;
+var router = express.Router();//是一个完整的中间件和路由系统，因此常称其为一个 “mini-app”
+var mockConfig, svrConfig, proxyConfig;
 var pmmConfig = require(path.resolve(".", "pmm.config.js"));
 try {
     //读取服务器配置
     svrConfig = pmmConfig.svrConfig;
     //读取代理配置
     proxyConfig = pmmConfig.proxyConfig;
-    //读取静态资源配置
-    staticConfig = pmmConfig.staticConfig;
+    //本地数据模拟配置
+    mockConfig = pmmConfig.mockConfig;
   } catch (e) {
     console.log(chalk.red(e));
-    process.exit(0);
-  } finally {
-  
-  }
-  try {
-    mockConfig = require(path.resolve(".", "pmm.mock.js"));
-  } catch (e) {
-    console.log(chalk.red(e));
-    console.log("[pmm] Please check the configuration file");
-    mockConfig = undefined;
+    //process.exit(0);
   } finally {
   
   }
@@ -33,9 +24,7 @@ function server() {
     //设置默认mock
     app.use(express.static(path.resolve('.', 'mock')));
     //设置指定静态资源目录
-    app.use(svrConfig.proName,express.static(path.resolve('.', staticConfig.folder)));
-    console.log(path.resolve('.', staticConfig.folder))
-    //判断是否启用mock
+    app.use(svrConfig.proName,express.static(path.resolve('.', svrConfig.staticFolder)));
       console.log(chalk.yellow("\n/******************** Start loading proxy server ********************/\n"));
       proxyConfig.forEach(function(element) {
         if (element.enable) {
@@ -46,16 +35,16 @@ function server() {
       });
       console.log(chalk.yellow("\n/******************** Proxy server loaded completed *****************/\n"));
     //判断是否启用mock
-    if(svrConfig.mockenable){
+    if(svrConfig.mockenable&&mockConfig){
       console.log(chalk.yellow("\n/******************** Start loading mock server ********************/\n"));
       for (let item in mockConfig) {
         for (let i = 0; i < mockConfig[item].length; i++) {
           for (let url in mockConfig[item][i]) {
             console.log(chalk.green(`[mock]:[${url}] to ${mockConfig[item][i][url]}`));
+            /* router.all不管使用 GET、POST、PUT、DELETE 或其他任何 http 模块支持的 HTTP 请求，句柄都会得到执行 */
             router.all(url, function(req, res, next) {
               console.log(chalk.green(`[mock]: ${req.method} ${req.ip} client router [${url}]-[${mockConfig[item][i][url]}]`));
               res.sendFile(path.resolve(".", mockConfig[item][i][url]), {
-                
               });
             });
           }
