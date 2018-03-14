@@ -4,11 +4,9 @@
   "description": "基于express 搭建前端代理以及本地模拟服务，方便前端开发",
   "main": "index.js",
   "bin": {
-    "pmm-server":"./bin/index.js"
-    
+    "pmm-server": "./bin/index.js"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/Magicwager/proxy-mock-middleware"
@@ -17,13 +15,21 @@
     "express",
     "proxy",
     "mock",
-    "node"
+    "node",
+    "gulp-proxy",
+    "gulp-mock",
+    "webpack-proxy",
+    "webpack-mock"
   ],
   "author": "magicwager",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.3.0",
     "express": "^4.16.2",
-    "http-proxy-middleware": "^0.17.4"
-  }
+    "http-proxy-middleware": "^0.17.4",
+    "webpack": "^2.7.0",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.2"
+  },
+  "devDependencies": {}
 }

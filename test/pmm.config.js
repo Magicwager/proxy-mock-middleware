@@ -3,7 +3,9 @@ const svrConfig = {
   port: 3000,
   mockenable: true,
   proName: '/react-gulp-es6',//项目名称
-  staticFolder: "dist"//静态资源托管目录
+  staticFolder: "dist",//静态资源托管目录
+  webpackFlag:true,
+  webpackCfgName: "webpack.dev.config.js"
 };
 const proxyConfig = [
   /* {
