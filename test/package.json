@@ -1,10 +1,11 @@
 {
   "name": "test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pmmtest": "node ./bin/test"
+    "gulp-pmmtest": "gulp",
+    "webpack-pmmtest": "node ./bin/test"
   },
   "repository": {
     "type": "git",
