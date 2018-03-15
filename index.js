@@ -73,7 +73,7 @@ function server() {
     app.use(webpackHotMiddleware(compiler));
   } else {
     //设置指定静态资源目录
-    app.use(express.static(path.resolve('.', svrConfig.staticFolder)));
+    app.use(svrConfig.proName,express.static(path.resolve('.', svrConfig.staticFolder)));
   }
   app.listen(svrConfig.port, svrConfig.host, function () {
     console.log(chalk.yellow("\n/******************** Start dev server *****************/\n"));

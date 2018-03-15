@@ -65,6 +65,7 @@
  * port:端口号（必须项）
  * mockenable:是否启用本地模拟服务（可选项，默认为false，true为启用）
  * buildTool:使用的构建工具名称，只能是'webpack'或'gulp'（必须项）
+ * proName:一般为项目名称，为静态资源目录指定一个挂载路径（可选）,访问静态资源是前头需要加上proName
  * staticFolder:静态资源托管目录，buildTool参数为‘gulp’时才配置（gulp工具时必须项）
  * webpackCfgName: webpack的开发配置文件，buildTool参数为‘webpack’时才配置（webpack工具时必须项）
 

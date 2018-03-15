@@ -12,6 +12,7 @@ const svrConfig = {
   port: 3000,
   mockenable: true,
   buildTool:"gulp",//使用的构建工具名称，只能是'webpack'或'gulp'
+  //proName:"/react-gulp-es6",
   staticFolder: "dist",//静态资源托管目录，buildTool参数为‘gulp’时才配置
 };
 
