@@ -22,8 +22,6 @@ try {
 } finally {
 
 }
-var webpackConfig = require(path.resolve(".", svrConfig.webpackCfgName));
-var compiler = webpack(webpackConfig);
 //开发调试总程序
 function server() {
   //设置默认mock
@@ -62,6 +60,8 @@ function server() {
   console.log(chalk.yellow("\n/******************** Start webpack-dev-middleware *****************/\n"))
   if (svrConfig.buildTool=="webpack") {
     //加载webpack处理
+    var webpackConfig = require(path.resolve(".", svrConfig.webpackCfgName));
+    var compiler = webpack(webpackConfig);
     console.log(chalk.yellow("\n/******************** Start webpack-dev-middleware *****************/\n"))
     app.use(webpackDevMiddleware(compiler, {
       publicPath: webpackConfig.output.publicPath,//资源目录与插件做绑定，与webpack配置的一致

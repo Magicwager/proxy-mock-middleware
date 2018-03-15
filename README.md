@@ -255,10 +255,19 @@ git clone https://github.com/Magicwager/proxy-mock-middleware.git
 
 * 启动测试工程：
 
+测试webpack工程输入
+
 ```	sh	
-	npm run pmmtest	
+	npm run webpack-pmmtest	
 ```
-访问[http://localhost:3000/react-gulp-es6/]() 根路由可以看效果
+浏览器直接打开可看效果
+测试gulp工程输入
+
+```	sh	  
+	npm run gulp-pmmtest	
+```
+
+访问[http://localhost:3000/index.html]() 可以看效果
 
 
 

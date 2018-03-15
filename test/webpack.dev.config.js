@@ -32,20 +32,20 @@ const resolve = {
   extensions: [
     ".jsx", ".js",".less",".css",".json"
   ],
-  alias: {
+  /* alias: {
     components: path.resolve(__dirname, "src/components/"),
     modules: path.resolve(__dirname, "src/modules/"),
     routes : path.resolve(__dirname, "src/routes/"),
     layout : path.resolve(__dirname, "src/layout/"),
     utils : path.resolve(__dirname, "src/utils/")
-  }
+  } */
 }
 
 //开发和生产需要的loader
 const rules = [{
   test: /\.js[x]?$/,
   exclude: /(node_modules)/,
-  include: path.resolve("src"),
+  include: path.resolve("wsrc"),
   use: [{
     loader: "babel-loader"
   }]
@@ -98,7 +98,7 @@ module.exports={
   devtool: "cheap-module-eval-source-map",
   entry: {
     vendors: getVendors(),
-    app: ["./src/index1.jsx", hotMiddlewareScript]
+    app: ["./wsrc/index.jsx", hotMiddlewareScript]
   },
   output: {
     path: path.resolve(__dirname, "./dist"),
@@ -118,12 +118,12 @@ module.exports={
     }),
     new webpack.NamedModulesPlugin(),
     new OpenBrowserPlugin({
-      url: `http://${svrConfig.host}:${svrConfig.port}`
+      url: `http://${svrConfig.host}:${svrConfig.port}/index.html`
     }),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: "index1.html",
-      template: "./src/index1.html",
+      template: "./wsrc/index.html",
       inject: "body",
       hash: false,
       chunks: ["vendors", "app"]

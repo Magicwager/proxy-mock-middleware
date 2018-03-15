@@ -151,5 +151,5 @@ gulp.task('dev-server', function () {
 });
 gulp.task('before', [ 'copy:src', 'less']);
 gulp.task('default', ['before','react-es6-dev','dev-server', 'watch','reload']);
-gulp.task('dev',['before','react-es6-dev','dev-server', 'watch'])
+gulp.task('dev',['before','react-es6-dev', 'watch','reload'])
 //gulp.task('trans-test', ['translate', 'dev-server','watch']);
