@@ -58,7 +58,7 @@
     "path": "^0.12.7",
     "portal-fe-devServer": "^1.0.0",
     "postcss-loader": "^2.1.1",
-    "proxy-mock-middleware": "0.0.5",
+    "proxy-mock-middleware": "1.0.2",
     "reactify": "^1.1.1",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.2.3",
