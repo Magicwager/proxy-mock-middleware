@@ -1,12 +1,24 @@
+//在webpack中的配置
 const svrConfig = {
   host: "127.0.0.1",
   port: 3000,
   mockenable: true,
-  proName: '/react-gulp-es6',//项目名称
-  staticFolder: "dist",//静态资源托管目录
-  webpackFlag:true,
-  webpackCfgName: "webpack.dev.config.js"
+  buildTool:"webpack",//使用的构建工具名称，只能是'webpack'或'gulp'
+  webpackCfgName: "webpack.dev.config.js"//webpack的开发配置文件，buildTool参数为‘webpack’时才配置
 };
+//在gulp中的配置
+/* const svrConfig = {
+  host: "127.0.0.1",
+  port: 3000,
+  mockenable: true,
+  buildTool:"gulp",//使用的构建工具名称，只能是'webpack'或'gulp'
+  staticFolder: "dist",//静态资源托管目录，buildTool参数为‘gulp’时才配置
+}; */
+
+
+
+
+
 const proxyConfig = [
   /* {
     enable : false,

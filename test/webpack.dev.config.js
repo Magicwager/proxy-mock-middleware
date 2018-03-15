@@ -98,7 +98,7 @@ module.exports={
   devtool: "cheap-module-eval-source-map",
   entry: {
     vendors: getVendors(),
-    app: ["./src/index.jsx", hotMiddlewareScript]
+    app: ["./src/index1.jsx", hotMiddlewareScript]
   },
   output: {
     path: path.resolve(__dirname, "./dist"),

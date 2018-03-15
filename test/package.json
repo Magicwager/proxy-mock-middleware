@@ -18,6 +18,7 @@
   },
   "homepage": "",
   "devDependencies": {
+    "autoprefixer": "^8.1.0",
     "axios-mock-adapter": "^1.10.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.6.2",

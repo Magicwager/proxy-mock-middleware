@@ -60,7 +60,7 @@ function server() {
    * 若是与gulp结合使用，则利用express静态资源托管，由gulp去管理文件的监控
   */
   console.log(chalk.yellow("\n/******************** Start webpack-dev-middleware *****************/\n"))
-  if (svrConfig.webpackFlag) {
+  if (svrConfig.buildTool=="webpack") {
     //加载webpack处理
     console.log(chalk.yellow("\n/******************** Start webpack-dev-middleware *****************/\n"))
     app.use(webpackDevMiddleware(compiler, {
@@ -73,7 +73,7 @@ function server() {
     app.use(webpackHotMiddleware(compiler));
   } else {
     //设置指定静态资源目录
-    app.use(svrConfig.proName, express.static(path.resolve('.', svrConfig.staticFolder)));
+    app.use(express.static(path.resolve('.', svrConfig.staticFolder)));
   }
   app.listen(svrConfig.port, svrConfig.host, function () {
     console.log(chalk.yellow("\n/******************** Start dev server *****************/\n"));
