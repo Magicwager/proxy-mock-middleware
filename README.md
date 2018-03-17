@@ -3,7 +3,7 @@
 ### 使用背景
 在前后端协同开发过程中，最多的就是数据联调。此中间件可以后端接口还没开发完时，能在本地快速模拟数据，而且接口与后台完全一制而不用在真正联调时还需要修改url，造成没必要的bug。同时，如果项目还依赖其他远程工程的服务（部署在公共的开发测试环境服务），可以启动代理，这样，前端就可以只运行前端工程而不用本地起后端服务。
 
-本插件可以应用于gulp构建工具，也可以应用于webpack打包工具，只需要几个小小的配置就能轻松使用。
+本插件可以应用于**gulp**构建工具，也可以应用于**webpack**打包工具，只需要几个小小的配置就能轻松使用。
 ### 使用手册
 * 安装
 
@@ -61,26 +61,26 @@
 
 **svrConfig配置** 
 
- * host:主机名（必须项）
- * port:端口号（必须项）
- * mockenable:是否启用本地模拟服务（可选项，默认为false，true为启用）
- * buildTool:使用的构建工具名称，只能是'webpack'或'gulp'（必须项）
- * proName:一般为项目名称，为静态资源目录指定一个挂载路径（可选）,访问静态资源是前头需要加上proName
- * staticFolder:静态资源托管目录，buildTool参数为‘gulp’时才配置（gulp工具时必须项）
- * webpackCfgName: webpack的开发配置文件，buildTool参数为‘webpack’时才配置（webpack工具时必须项）
+ * **host**:主机名（必须项）
+ * **port**:端口号（必须项）
+ * **mockenable**:是否启用本地模拟服务（可选项，默认为false，true为启用）
+ * **buildTool**:使用的构建工具名称，只能是'webpack'或'gulp'（必须项）
+ * **proName**:一般为项目名称，为静态资源目录指定一个挂载路径（可选）,访问静态资源是前头需要加上proName
+ * **staticFolder**:静态资源托管目录，buildTool参数为‘gulp’时才配置（gulp工具时必须项）
+ * **webpackCfgName**: webpack的开发配置文件，buildTool参数为‘webpack’时才配置（webpack工具时必须项）
 
 **proxyConfig配置** 
 
 可以配置多个代理，每个代理有三个参数：
 
-* enable : 是否代理(true启用代理)
-* router: 代理目录
-* url: "http://workbenchdev.yyuap.com"//代理远程地址
+* **enable**: 是否代理(true启用代理)
+* **router**: 代理目录
+* **url**:    代理远程地址
 
 **mockConfig配置** 
 
 
-可以配置GET、POST、PUT、DELETE 或其他任何 http 模块支持的 HTTP 请求。
+可以配置**GET**、**POST**、**PUT**、**DELETE** 或其他任何 http 模块支持的 HTTP 请求。
 其中本地模拟配置中需要注意的是`"/bd/materialclass/list"`表示真实的接口地址，`"./mock/list.json"`为本地接口数据的json文件
 
 
@@ -109,6 +109,8 @@
 * **配合webpack使用**：
 
 第一步，不需要配置webpack中的devServer，只保留webpack的打包功能，因为devServer的配置其实是供webpack-dev-server使用，而它主要是启动了一个使用express的Http服务器。本插件proxy-mock-middleware也是启动一个Http服务器，所以不需要重复启用。
+
+
 第二步：全局安装proxy-mock-middleware
 
 ```sh
@@ -229,6 +231,8 @@ pmm.config.js的配置如下：
 
 ```
 运行`pmm-server`启动http服务就可以正常访问资源了。
+
+
 具体例子可以看下面测试工程的例子。
 
 
@@ -262,6 +266,8 @@ git clone https://github.com/Magicwager/proxy-mock-middleware.git
 	npm run webpack-pmmtest	
 ```
 浏览器直接打开可看效果
+
+
 测试gulp工程输入
 
 ```	sh	  
