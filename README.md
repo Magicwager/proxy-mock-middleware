@@ -274,7 +274,7 @@ git clone https://github.com/Magicwager/proxy-mock-middleware.git
 	npm run gulp-pmmtest	
 ```
 
-访问[http://localhost:3000/index.html]() 可以看效果
+访问[http://localhost:3000/react-gulp-es6/index.html]() 可以看效果
 
 
 

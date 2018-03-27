@@ -20,7 +20,7 @@ var react=require('gulp-react');
 var webpack = require("gulp-webpack");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var server = require('gulp-server-livereload');
-var pmm = require('proxy-mock-middleware');
+var pmm = require('../index.js');
 
 // 编译 src 下所有的 html,js 文件到 dist 目录
 gulp.task('copy:src', function () {
